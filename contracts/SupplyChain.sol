@@ -40,8 +40,8 @@ contract SupplyChain {
   // <LogReceived event: sku arg>
   event LogReceived(uint sku);
 
-   modifier isOwner (address _address) { 
-    require (_address == msg.sender); 
+   modifier isOwner () { 
+    require (msg.sender == owner); 
     _;
   }
 
